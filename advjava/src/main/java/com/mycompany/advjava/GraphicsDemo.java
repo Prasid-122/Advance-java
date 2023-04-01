@@ -17,6 +17,8 @@ Container container;
         container.add(panel);
         this.setVisible(true);
     }
+    
+    
       class mypanel extends JPanel{
    @Override
         public void paint(Graphics g){
@@ -28,10 +30,6 @@ Container container;
         
         g.setColor(Color.black);
         g.fillOval(10, 90, 50, 50);
-        
-        
-            
-            
     }
     }
         

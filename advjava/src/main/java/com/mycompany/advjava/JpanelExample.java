@@ -1,12 +1,7 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
- */
+
 package com.mycompany.advjava;
 
 import java.awt.Color;
-import static java.awt.Color.BLACK;
-import static java.awt.Color.RED;
 import java.awt.Container;
 import java.awt.FlowLayout;
 import javax.swing.BorderFactory;
@@ -16,10 +11,7 @@ import javax.swing.JPanel;
 import javax.swing.JRadioButton;
 import javax.swing.border.Border;
 
-/**
- *
- * @author Marshall
- */
+
 public class JpanelExample extends JFrame{
     Container container;
     
@@ -29,8 +21,6 @@ public class JpanelExample extends JFrame{
         this.setBounds(100,100,600,400);
         this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         
-        
-       
         JPanel red=new JPanel();
         red.setBackground(Color.red);
         red.setLayout(null);
@@ -42,7 +32,7 @@ public class JpanelExample extends JFrame{
         green.setBounds(0, 100, 600, 100);
         
         JButton[] numberButtons = new JButton[10];
-	JButton[] functionButtons = new JButton[9];
+        JButton[] functionButtons = new JButton[9];
         
         JButton button1=new JButton("Button1");
         JButton button2=new JButton("Button2");

@@ -53,7 +53,7 @@ public class Login extends JFrame implements ActionListener {
             day[i] = Integer.toString(i + 1);
         }
         for (int i = 0; i < 100; i++) {
-            year[i] = Integer.toString(i + 1970);
+            year[i] = Integer.toString(i + 1980);
         }
         JLabel dayLabel = new JLabel("Day");
         dayLabel.setFont(font);
