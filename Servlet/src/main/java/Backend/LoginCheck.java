@@ -4,7 +4,7 @@
  */
 package Backend;
 
-import javax.servlet.Filter;
+import javax.servlet.Filter; 
 import javax.servlet.FilterChain;
 import javax.servlet.ServletException;
 import javax.servlet.ServletRequest;
@@ -22,24 +22,51 @@ import java.io.IOException;
 public class LoginCheck implements Filter{
 
 
-    @Override
+//    @Override
+//    public void doFilter(ServletRequest sreq, ServletResponse sres, FilterChain fc) throws IOException, ServletException {
+//        HttpServletRequest req= (HttpServletRequest) sreq;
+//        HttpServletResponse res= (HttpServletResponse) sres;
+//        
+//        if(req.getServletPath().equals("/frontend/LoginForm.jsp")||req.getServletPath().equals("/LoginUser")){
+//            System.out.println("okay");
+//            System.out.println(req.getServletPath());
+//        }else{
+//            HttpSession session = req.getSession(false);
+//            if(session.getAttribute("username")==null){
+//                session.setAttribute("errorMsg", "you are not logged in");
+//                res.sendRedirect("/Servlet/frontend/LoginForm.jsp");
+//                return;
+//            }else{
+//                
+//            }
+//            
+//            
+//        }
+//        fc.doFilter(req,res);
+//    }
+//    
+//
+//    
+//}
+    
+ @Override
     public void doFilter(ServletRequest sreq, ServletResponse sres, FilterChain fc) throws IOException, ServletException {
         HttpServletRequest req= (HttpServletRequest) sreq;
         HttpServletResponse res= (HttpServletResponse) sres;
         
         if(req.getServletPath().equals("/frontend/LoginForm.jsp")||req.getServletPath().equals("/LoginUser")){
             System.out.println("okay");
-            System.out.println(req.getServletPath());
+            System.out.println(req.getServletPath());   
         }else{
-            HttpSession session = req.getSession(false);
+            HttpSession session = req.getSession();
             if(session.getAttribute("username")==null){
                 session.setAttribute("errorMsg", "you are not logged in");
+                System.out.println(session.getAttribute("errorMsg"));
                 res.sendRedirect("/Servlet/frontend/LoginForm.jsp");
                 return;
             }else{
                 
             }
-            
             
         }
         fc.doFilter(req,res);

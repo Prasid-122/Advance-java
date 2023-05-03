@@ -40,14 +40,16 @@ if(session.getAttribute("username")!=null){
             <a href="DisplayUser.jsp">Display User</a>
 
 
-            <a href="item_purchase.php">
+            <a href="purchase.jsp">Purchase</a>
 
-                Purchase</a>
-
-            <a href="item_sales.php"> Sale</a>
+            <a href="Sales.jsp"> Sale</a>
 
             <a href="purchase_display.php">Display Purchase Data</a>
 
             <a href="stock.php">Stock</a>
+            
+            <%if(session.getAttribute("msg")!=null){
+            out.println(session.getAttribute("msg"));
+                }%>
 
         </div>
