@@ -13,7 +13,6 @@ import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 import java.io.InputStream;
 import java.sql.Connection;
-//import java.sql.DriverManager;
 import java.sql.PreparedStatement;
 import java.sql.SQLException;
 import java.sql.Statement;
@@ -24,14 +23,13 @@ import javax.servlet.http.Part;
 
 /**
  *
- * @author Shalon
+ * @author prasid
  */
 @MultipartConfig
 public class SaveItems extends HttpServlet {
     Connection con;
     @Override
     public void init() throws ServletException {
-    
         try {
             con = DBConnect.connect();
         } catch (ClassNotFoundException ex) {
@@ -39,11 +37,8 @@ public class SaveItems extends HttpServlet {
         } catch (SQLException ex) {
             Logger.getLogger(SaveItems.class.getName()).log(Level.SEVERE, null, ex);
         }
-   
-      
+         
     }
-
-   
     @Override
     protected void doPost(HttpServletRequest req, HttpServletResponse res) throws ServletException, IOException {
        // normalWay(req, res);

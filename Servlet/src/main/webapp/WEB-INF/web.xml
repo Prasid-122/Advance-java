@@ -77,6 +77,10 @@
         <servlet-name>ViewItem</servlet-name>
         <servlet-class>Backend.ViewItem</servlet-class>
     </servlet>
+    <servlet>
+        <servlet-name>GetItemForView</servlet-name>
+        <servlet-class>Backend.GetItemForView</servlet-class>
+    </servlet>
     <servlet-mapping>
         <servlet-name>SaveUser</servlet-name>
         <url-pattern>/SaveUser</url-pattern>
@@ -162,8 +166,8 @@
         <url-pattern>/CookieTest</url-pattern>
     </servlet-mapping>
     <servlet-mapping>
-        <servlet-name>ViewItem</servlet-name>
-        <url-pattern>/ViewItem</url-pattern>
+        <servlet-name>GetItemForView</servlet-name>
+        <url-pattern>/GetItemForView</url-pattern>
     </servlet-mapping>
     <session-config>
         <session-timeout>
